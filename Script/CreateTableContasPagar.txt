@@ -1,0 +1,41 @@
+CREATE TABLE dbo.ContasAPagar (
+    Id INT IDENTITY(1,1) PRIMARY KEY,          -- ID da conta, auto-incremento
+    Descricao VARCHAR(255) NULL,            -- Descrição da conta
+    Valor DECIMAL(18, 2) NULL,             -- Valor da conta a pagar
+    DataVencimento DATE NULL,              -- Data de vencimento da conta
+    DataPagamento DATE NULL,                   -- Data de pagamento (pode ser nula se não pago ainda)
+    Status VARCHAR(50)  NULL,               -- Status (exemplo: 'Pendente', 'Pago', etc.)
+    Fornecedor VARCHAR(255) NOT NULL,          -- Nome do fornecedor
+    Categoria VARCHAR(100) NULL,               -- Categoria (opcional)
+    Observacoes VARCHAR(50) NULL,                     -- Observações adicionais (opcional)
+    DataCriacao DATETIME DEFAULT GETDATE(),    -- Data de criação do registro, default para o momento atual
+    DataUltimaAlteracao DATETIME DEFAULT GETDATE() -- Data da última alteração
+);
+
+select * from dbo.ContasAPagar
+
+INSERT INTO dbo.ContasAPagar 
+(
+    Descricao, 
+    Valor, 
+    DataVencimento, 
+    DataPagamento, 
+    Status, 
+    Fornecedor, 
+    Categoria, 
+    Observacoes
+)
+VALUES 
+(
+    'Pagamento de fornecedor Z',           -- Descricao
+    500.00,                                -- Valor
+    '2025-02-28',                          -- DataVencimento
+    NULL,                                  -- DataPagamento (NULL pois ainda não foi pago)
+    'Pendente',                            -- Status
+    'Fornecedor Z',                        -- Fornecedor
+    'Serviços',                            -- Categoria
+    'Pagamento referente ao contrato de manutenção' -- Observacoes
+);
+
+
+Select * from ContasAPagar

@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <style>
+        /* Estilo para centralizar a página */
+
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para o formulário */
+        .input-container {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px 40px 10px 10px; /* espaço para o ícone */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Posicionando o ícone dentro do campo */
+        .input-container i {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #888;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+            .forgot-password a {
+                text-decoration: none;
+                color: #4CAF50;
+            }
+
+                .forgot-password a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+    <!-- Link para o FontAwesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <!-- Campo de email -->
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input type="text" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <!-- Campo de senha -->
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            </div>
+
+            <!-- Botão de login -->
+            <button type="submit">Entrar</button>
+
+            <!-- Link para recuperação de senha -->
+            <div class="forgot-password">
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+.container-login {
+    background-color: #fff;
+    padding: 30px; /* Aumentando o padding para dar mais espaçamento */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    max-width: 400px; /* Adicionando limite de largura para a caixa de login */
+    margin: 0 auto; /* Centralizando a caixa de login */
+}
+
+.form {
+    text-align: center;
+}
+
+.form-control {
+    margin-bottom: 20px; /* Aumentando a margem inferior para maior espaçamento */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px; /* Aumentando a margem abaixo do label */
+    font-weight: bold; /* Opcional: para destacar mais o label */
+}
+
+input {
+    width: 100%;
+    padding: 12px; /* Aumentando o padding para inputs mais confortáveis */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garantir que o padding não afete o tamanho total do input */
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px; /* Aumentando o padding do botão para torná-lo mais visível */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Deixando o botão com largura total para combinar com o input */
+}
+
+    button:hover {
+        background-color: #3e8e41;
+    }
+
+p {
+    margin: 15px 0; /* Aumentando o espaçamento para o parágrafo */
+    font-size: 14px;
+}

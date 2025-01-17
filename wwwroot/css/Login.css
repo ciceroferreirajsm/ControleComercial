@@ -1,49 +1,69 @@
-.container-login {
-    background-color: #fff;
-    padding: 30px; /* Aumentando o padding para dar mais espaçamento */
+/* Estilo para centralizar a página */
+
+.login-container {
+    background-color: black;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    max-width: 400px; /* Adicionando limite de largura para a caixa de login */
-    margin: 0 auto; /* Centralizando a caixa de login */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    margin-left: 60%;
+    margin-top: 20%;
 }
 
-.form {
+h2 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.form-control {
-    margin-bottom: 20px; /* Aumentando a margem inferior para maior espaçamento */
+/* Estilo para o formulário */
+.input-container {
+    margin-bottom: 20px;
+    position: relative;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px; /* Aumentando a margem abaixo do label */
-    font-weight: bold; /* Opcional: para destacar mais o label */
-}
-
-input {
+input[type="text"], input[type="password"] {
     width: 100%;
-    padding: 12px; /* Aumentando o padding para inputs mais confortáveis */
+    padding: 10px 40px 10px 10px; /* espaço para o ícone */
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Garantir que o padding não afete o tamanho total do input */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Posicionando o ícone dentro do campo */
+.input-container i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888;
 }
 
 button {
+    width: 100%;
+    padding: 10px;
     background-color: #4CAF50;
-    color: #fff;
-    padding: 12px 20px; /* Aumentando o padding do botão para torná-lo mais visível */
+    color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    width: 100%; /* Deixando o botão com largura total para combinar com o input */
 }
 
     button:hover {
-        background-color: #3e8e41;
+        background-color: #45a049;
     }
 
-p {
-    margin: 15px 0; /* Aumentando o espaçamento para o parágrafo */
-    font-size: 14px;
+.forgot-password {
+    text-align: center;
+    margin-top: 10px;
 }
+
+    .forgot-password a {
+        text-decoration: none;
+        color: #4CAF50;
+    }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }

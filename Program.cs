@@ -1,7 +1,13 @@
+using ControleComercial.Interfaces;
+using ControleComercial.Repositorio;
+using ControleComercial.Servicos;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IContasPagarRepositorio, ContasPagarRepositorio>();
+builder.Services.AddScoped<IContasPagarServico, ContasPagarServico>();
 
 var app = builder.Build();
 

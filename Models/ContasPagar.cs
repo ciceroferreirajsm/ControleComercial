@@ -2,7 +2,7 @@ using System;
 
 namespace ControleComercial.Models
 {
-    public class ContaPagar
+    public class ContasPagar
     {
         public int Id { get; set; }
 
@@ -26,7 +26,7 @@ namespace ControleComercial.Models
 
         public DateTime DataUltimaAlteracao { get; set; }
 
-        public ContaPagar()
+        public ContasPagar()
         {
             DataCriacao = DateTime.Now;
             DataUltimaAlteracao = DateTime.Now;

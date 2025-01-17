@@ -1,0 +1,10 @@
+CREATE TABLE dbo.Produto (
+    Id INT IDENTITY(1,1) PRIMARY KEY,         -- ID do produto, auto-incremento
+    Nome VARCHAR(255) NULL,               -- Nome do produto
+    Descricao VARCHAR(255) NULL,                      -- Descrição do produto
+    Preco DECIMAL(18, 2) NULL,            -- Preço do produto
+    QuantidadeEstoque INT NULL,          -- Quantidade em estoque
+    Categoria VARCHAR(100) NULL,              -- Categoria do produto
+    DataCriacao DATETIME DEFAULT GETDATE(),   -- Data de criação do produto
+    DataUltimaAlteracao DATETIME DEFAULT GETDATE()  -- Data da última alteração
+);

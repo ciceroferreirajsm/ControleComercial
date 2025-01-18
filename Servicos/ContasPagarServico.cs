@@ -14,5 +14,10 @@ namespace ControleComercial.Servicos
         {
             _contasPagarRepositorio.InserirContasPagas(contasPagar);
         }
+
+        public List<ContasPagar> ObterContasAPagar()
+        {
+            return _contasPagarRepositorio.ObterContasAPagar();
+        }
     }
 }

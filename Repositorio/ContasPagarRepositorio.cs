@@ -44,6 +44,17 @@ namespace ControleComercial.Repositorio
                 db.Execute(query, param);
             }
         }
+        public List<ContasPagar> ObterContasAPagar()
+        {
+            using (var db = new SqlConnection(ConnectionString))
+            {
+                db.Open();
+                string query = "SELECT * FROM dbo.ContasAPagar";
+
+                var contas = db.Query<ContasPagar>(query).ToList();
+                return contas;
+            }
+        }
 
     }
 }

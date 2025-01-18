@@ -14,5 +14,10 @@ namespace ControleComercial.Servicos
         {
             _ProdutoRepositorio.InserirProduto(Produto);
         }
+
+        public List<Produto> ObterProdutos()
+        {
+            return _ProdutoRepositorio.ObterProdutos();
+        }
     }
 }

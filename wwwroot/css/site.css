@@ -20,3 +20,20 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.logo-img-container {
+    vertical-align: middle;
+    border-style: none;
+    width: 38%;
+    height: 50%;
+}
+.logo-img {
+    vertical-align: middle;
+    border-style: none;
+    width: 50%;
+    height: 50%;
+}
+
+.custom-margin {
+    margin-right: 5px; /* Ajuste o valor conforme necessário */
+}

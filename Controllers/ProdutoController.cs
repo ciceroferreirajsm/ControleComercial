@@ -17,6 +17,13 @@ namespace ControleComercial.Controllers
 
         public IActionResult Index()
         {
+            var produtos = _ProdutoServico.ObterProdutos();
+
+            return View(produtos);
+        }
+
+        public IActionResult Cadastrar()
+        {
             return View();
         }
 
@@ -24,7 +31,17 @@ namespace ControleComercial.Controllers
         public IActionResult Cadastrar(Produto Produto)
         {
             _ProdutoServico.InserirProduto(Produto);
-            return View();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Editar(int id)
+        {
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Excluir(int id)
+        {
+            return RedirectToAction("Index");
         }
     }
 }

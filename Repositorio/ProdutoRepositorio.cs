@@ -41,5 +41,17 @@ namespace ControleComercial.Repositorio
                 db.Execute(query, param);
             }
         }
+
+        public List<Produto> ObterProdutos()
+        {
+            using (var db = new SqlConnection(ConnectionString))
+            {
+                db.Open();
+                string query = "SELECT * FROM dbo.Produto";
+
+                var Produtos = db.Query<Produto>(query).ToList();
+                return Produtos;
+            }
+        }
     }
 }

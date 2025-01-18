@@ -1,11 +1,5 @@
 using ControleComercial.Models;
-using Dapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
-using StackExchange.Profiling.Data;
-using StackExchange.Profiling;
-using System.Data;
-using System.Diagnostics;
 using ControleComercial.Interfaces;
 
 namespace ControleComercial.Controllers
@@ -23,6 +17,13 @@ namespace ControleComercial.Controllers
 
         public IActionResult Index()
         {
+            var contas = _contasPagarServico.ObterContasAPagar();
+
+            return View(contas);
+        }
+
+        public IActionResult Cadastrar()
+        {
             return View();
         }
 
@@ -30,7 +31,16 @@ namespace ControleComercial.Controllers
         public IActionResult Cadastrar(ContasPagar contasPagar)
         {
             _contasPagarServico.InserirContasPagas(contasPagar);
-            return View();
+            return RedirectToAction("Index");
+        }
+        public IActionResult Editar(int id)
+        {
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Excluir(int id)
+        {
+            return RedirectToAction("Index");
         }
     }
 }
